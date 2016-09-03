@@ -1,0 +1,21 @@
+def isprime(num):
+    #return true if given number is a prime number
+    if num == 2:
+        return True
+    if num == 3:
+        return True
+    if num % 2 == 0:
+        return False
+    if num % 3 == 0:
+        return False
+
+    i = 5
+    j = 2
+
+    while i*i <= num: #factor of a number < i ** 0.5 + 1
+        if num % i == 0:
+            return False
+        i += j
+        j = 6 - j
+    return True
+
