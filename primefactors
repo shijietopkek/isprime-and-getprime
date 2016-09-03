@@ -1,0 +1,7 @@
+def primeFact (num, factor):
+    if num < factor:
+        return []
+    elif num % factor == 0:
+        return [factor] + primeFact (num / factor, 2)
+    return primeFact (num, factor + 1)
+
