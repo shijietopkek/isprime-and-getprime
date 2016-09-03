@@ -1,0 +1,20 @@
+def prime(num):
+    #generate prime numbers <= num
+    count = 3
+    arr=[]
+    while count <= num:
+        isprime = True
+        
+        for x in range(2, int(count**0.5) + 1):
+            if count % x == 0: #is not prime
+                isprime = False
+                break
+        
+        if isprime:
+            arr.append(count)
+        
+        count += 2
+    return arr
+
+print(prime(45))
+            
